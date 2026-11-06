@@ -1,0 +1,115 @@
+<!doctype html>
+<!-- Copyright (c) 2026 geniuskey and MoneyBooks contributors.
+     Executable code: MIT. Educational descriptions: CC-BY-4.0. See LICENSE.md. -->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoneyBooks · 숫자를 바꾸며 배우는 돈과 경제 교과서</title>
+<meta name="description" content="월급 명세서와 예산, 경제 뉴스, 주식, 부동산, 세금, 보험까지. 숫자를 직접 바꾸며 배우는 한국어 인터랙티브 돈·경제 교과서 6권을 한 서가에서 만납니다.">
+<link rel="canonical" href="https://money.euiyun.com/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#0d1320">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyBooks">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="MoneyBooks · 돈 교과서 서가">
+<meta property="og:description" content="월급 명세서에서 경제 뉴스, 주식과 집, 세금과 보험까지. 브라우저에서 숫자를 직접 바꾸며 돈의 원리를 배웁니다.">
+<meta property="og:url" content="https://money.euiyun.com/">
+<meta property="og:image" content="https://money.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var theme = localStorage.getItem("money-theme"); if (theme) document.documentElement.setAttribute("data-theme", theme); } catch (e) {}</script>
+<link rel="stylesheet" href="shelf.css">
+<link rel="stylesheet" href="shared/css/cover-animations.css">
+<script src="catalog.js"></script>
+<script src="shared/js/covers.js"></script>
+<script defer src="shared/js/shelf.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="logo" href="./" aria-label="MoneyBooks 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="brand" x2="1" y2="1"><stop stop-color="#0b8a63"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#brand)"/><circle cx="16" cy="16" r="9" fill="none" stroke="#fff" stroke-width="2"/><path d="M11.5 11.5 13.6 20.5 16 13.5 18.4 20.5 20.5 11.5M10.8 15.2h10.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>MoneyBooks<small>돈 교과서 서가</small></span></a>
+    <nav class="top-nav" aria-label="이 페이지의 구역">
+      <a href="#shelf">교과서</a><a href="#play">직접 해보기</a><a href="#paths">읽는 순서</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn all-books" href="https://books.euiyun.com/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h5v14H4zM9 5h5v14H9zM17 6l3-1 3 14-3 1z"/></svg><span>전체 책</span></a>
+      <a class="btn icon" href="https://books.euiyun.com/feedback.html?book=moneybooks" aria-label="독자 의견 보내기" title="독자 의견 보내기"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 4V6a2 2 0 0 1 2-2z"/><path d="M8 9h8M8 13h5"/></svg></a>
+      <button class="btn icon" id="theme" type="button" aria-label="다크 모드로 전환"></button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="library" id="shelf" aria-labelledby="shelf-title">
+    <div class="wrap">
+      <div class="welcome">
+        <div>
+          <div class="eyebrow">MoneyBooks · Interactive Money Library</div>
+          <h1 id="shelf-title">돈 이야기는 감으로 말고,<br><em>숫자를 직접 바꿔 보며</em></h1>
+        </div>
+        <div class="welcome-side">
+          <p>연봉을 바꿔 실수령을 보고, 기준금리를 올려 대출 이자와 집값이 어떻게 번지는지, 호가창에 주문을 넣고 연말정산을 계단으로 내려가 봅니다. 돈 관리 MoneyBook, 경제 뉴스 EconomicsBook, 주식 StockBook, 부동산 EstateBook, 세금 TaxBook, 보험 InsureBook이 함께 꽂힌 서가입니다.</p>
+          <p class="stats" id="stats"><span><b>6</b>권 공개</span><span>돈 · 경제 · 주식 · 부동산 · 세금 · 보험</span></p>
+        </div>
+      </div>
+      <div class="shelf-controls">
+        <div class="filters" id="filters" role="group" aria-label="분야 선택"></div>
+        <div class="shelf-tools">
+          <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="book-search" type="search" placeholder="책 이름·주제 찾기" aria-label="책 이름과 주제로 검색" autocomplete="off"></label>
+          <span id="book-count" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="bookcase" id="book-grid"></div>
+      <p class="empty" id="empty" hidden>조건에 맞는 책이 없습니다. 다른 검색어나 분야를 선택해 보세요.</p>
+      <noscript><p class="noscript"><a href="money/">MoneyBook · 돈</a> · <a href="economics/">EconomicsBook · 경제</a> · <a href="stock/">StockBook · 주식</a> · <a href="estate/">EstateBook · 부동산</a> · <a href="tax/">TaxBook · 세금</a> · <a href="insure/">InsureBook · 보험</a>. JavaScript를 켜면 책 검색을 사용할 수 있습니다.</p></noscript>
+    </div>
+  </section>
+
+  <section class="block" id="play" aria-labelledby="play-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">직접 해보기</div>
+          <h2 id="play-title">궁금한 장면에서 시작해 보세요</h2>
+        </div>
+        <p>질문 하나를 골라 시뮬레이터를 움직여 보세요. 각 실험은 해당 교과서의 그 장면으로 바로 이어집니다.</p>
+      </div>
+      <div class="experiments" id="experiments" style="--gaps:9">
+<a class="experiment" data-book="moneybook" href="money/chapters/lab.html#sim-life"><span class="experiment-image"><img src="shared/img/sims/moneybook-sim-life.jpg" alt="한 사람의 돈은 63년 동안 어떻게 흐를까?" width="720" height="486" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">MoneyBook · 돈</span><strong>한 사람의 돈은 63년 동안 어떻게 흐를까?</strong><span class="experiment-desc">연봉·집·저축을 바꾸며 27세부터 90세까지 순자산 곡선을 그려 봅니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="economicsbook" href="economics/chapters/transmission.html#sim-ripple"><span class="experiment-image"><img src="shared/img/sims/economicsbook-sim-ripple.jpg" alt="기준금리 0.25%p는 어디까지 번질까?" width="720" height="448" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">EconomicsBook · 경제</span><strong>기준금리 0.25%p는 어디까지 번질까?</strong><span class="experiment-desc">기준금리를 바꾸면 대출금리·주가·집값·환율이 서로 다른 시차로 움직이는 모습을 2년 동안 재생합니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="stockbook" href="stock/chapters/orderbook.html#sim-live"><span class="experiment-image"><img src="shared/img/sims/stockbook-sim-live.jpg" alt="주가는 어디에서 정해질까?" width="720" height="416" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">StockBook · 주식</span><strong>주가는 어디에서 정해질까?</strong><span class="experiment-desc">주문이 흘러드는 호가창을 지켜보며 매도1호가가 다 팔리는 순간 현재가가 한 칸 오르는 것을 봅니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="estatebook" href="estate/chapters/jeonse.html#sim-risk"><span class="experiment-image"><img src="shared/img/sims/estatebook-sim-risk.jpg" alt="집값이 내리면 보증금은 얼마나 돌아올까?" width="720" height="364" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">EstateBook · 부동산</span><strong>집값이 내리면 보증금은 얼마나 돌아올까?</strong><span class="experiment-desc">집값 하락률을 끌어 경매 배당이 보증금을 어디까지 돌려주는지, 깡통전세가 되는 선을 찾습니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="taxbook" href="tax/chapters/yearend.html#sim-calc"><span class="experiment-image"><img src="shared/img/sims/taxbook-sim-calc.jpg" alt="연말정산 환급은 어떻게 정해질까?" width="720" height="505" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">TaxBook · 세금</span><strong>연말정산 환급은 어떻게 정해질까?</strong><span class="experiment-desc">총급여·가족·카드·연금저축을 넣어 과세표준에서 결정세액까지 한 계단씩 내려가고, 미리 낸 세금과 비교합니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="insurebook" href="insure/chapters/pooling.html#sim-ll"><span class="experiment-image"><img src="shared/img/sims/insurebook-sim-ll.jpg" alt="여럿이 나누면 왜 덜 흔들릴까?" width="720" height="476" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">InsureBook · 보험</span><strong>여럿이 나누면 왜 덜 흔들릴까?</strong><span class="experiment-desc">함께 나누는 가구가 늘수록 한 집이 내는 몫의 흔들림이 1/√N로 줄어드는 것을 봅니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="stockbook" href="stock/chapters/backtest.html#sim-surv"><span class="experiment-image"><img src="shared/img/sims/stockbook-sim-surv.jpg" alt="살아남은 종목만 보면 무엇이 달라질까?" width="720" height="328" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">StockBook · 주식</span><strong>살아남은 종목만 보면 무엇이 달라질까?</strong><span class="experiment-desc">상장폐지된 종목을 빼고 돌린 백테스트가 수익률을 얼마나 부풀리는지 두 곡선으로 비교합니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="estatebook" href="estate/chapters/mortgage.html#sim-af"><span class="experiment-image"><img src="shared/img/sims/estatebook-sim-af.jpg" alt="금리가 오르면 살 수 있는 집값은?" width="720" height="364" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">EstateBook · 부동산</span><strong>금리가 오르면 살 수 있는 집값은?</strong><span class="experiment-desc">금리를 끌면 DSR 한도가 줄어 살 수 있는 집값 상한이 내려가고, 같은 집을 못 사게 되는 금리가 드러납니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+<a class="experiment" data-book="insurebook" href="insure/chapters/commission.html#sim-ru"><span class="experiment-image"><img src="shared/img/sims/insurebook-sim-ru.jpg" alt="설계사 수수료는 언제 얼마나 나갈까?" width="720" height="448" loading="lazy"></span><span class="experiment-body"><span class="experiment-book">InsureBook · 보험</span><strong>설계사 수수료는 언제 얼마나 나갈까?</strong><span class="experiment-desc">첫해 선지급과 분급을 비교하고, 해지 시점을 끌어 환수와 손실을 봅니다.</span><span class="experiment-action">직접 바꿔 보기 →</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block paths" id="paths" aria-labelledby="paths-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">읽는 순서</div>
+          <h2 id="paths-title">어디서 시작할까요?</h2>
+        </div>
+        <p>처음이라면 MoneyBook으로 돈의 큰 그림을 보고, 궁금한 주제가 생기면 해당 교과서로 넘어가세요.</p>
+      </div>
+      <div class="path-list"><article class="path"><h3>돈 관리의 기초</h3><p>월급 명세서를 읽고 예산을 세운 뒤 비상금부터 모읍니다.</p><ol><li><a data-book="moneybook" href="money/chapters/income.html">월급 명세서 읽기</a></li><li><a data-book="moneybook" href="money/chapters/budget.html">예산과 소비</a></li><li><a data-book="moneybook" href="money/chapters/saving.html">저축과 비상금</a></li></ol></article><article class="path"><h3>경제 뉴스를 내 숫자로</h3><p>헤드라인의 기준 시점을 읽고, 기준금리 변화를 내 대출 이자로 옮겨 계산합니다.</p><ol><li><a data-book="economicsbook" href="economics/chapters/overview.html">경제 뉴스의 지도</a></li><li><a data-book="economicsbook" href="economics/chapters/transmission.html">기준금리가 퍼지는 길</a></li><li><a data-book="moneybook" href="money/chapters/loan.html">대출 상환의 구조</a></li></ol></article><article class="path"><h3>투자를 시작하기 전에</h3><p>생활 자금과 위험을 정리한 뒤 시장과 상품의 원리를 봅니다.</p><ol><li><a data-book="moneybook" href="money/chapters/portfolio.html">자산배분</a></li><li><a data-book="stockbook" href="stock/chapters/orderbook.html">호가창과 체결</a></li><li><a data-book="stockbook" href="stock/chapters/risk.html">위험과 분산</a></li></ol></article><article class="path"><h3>전세냐, 매매냐</h3><p>주거비를 같은 저울에 올리고 보증금의 위험과 대출 한도를 계산합니다.</p><ol><li><a data-book="moneybook" href="money/chapters/housing.html">집: 월세·전세·매매</a></li><li><a data-book="estatebook" href="estate/chapters/jeonse.html">전세의 경제학</a></li><li><a data-book="estatebook" href="estate/chapters/mortgage.html">주택담보대출</a></li></ol></article><article class="path"><h3>첫 연말정산</h3><p>매달 떼인 세금이 연말정산에서 어떻게 정산되는지 계단으로 따라갑니다.</p><ol><li><a data-book="taxbook" href="tax/chapters/payslip.html">월급명세서와 원천징수</a></li><li><a data-book="taxbook" href="tax/chapters/credit.html">세액공제</a></li><li><a data-book="taxbook" href="tax/chapters/yearend.html">연말정산 계산기</a></li></ol></article><article class="path"><h3>우리 가족 보험 정리</h3><p>감당할 위험과 보험으로 넘길 위험을 나누고 보장 공백을 찾습니다.</p><ol><li><a data-book="moneybook" href="money/chapters/insurance.html">보험과 위험 관리</a></li><li><a data-book="insurebook" href="insure/chapters/pooling.html">위험을 나누는 수학</a></li><li><a data-book="insurebook" href="insure/chapters/planning.html">보장 설계의 기술</a></li></ol></article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><a class="foot-brand" href="./">MoneyBooks</a><span>숫자를 바꾸며 배우는 돈</span></p>
+    <p class="foot-links"><a href="#shelf">교과서</a><a href="#play">직접 해보기</a><a href="#paths">읽는 순서</a><a href="https://books.euiyun.com/">euiyun books 전체 서가 ↗</a></p>
+    <small>수치는 교육용 근사 모델이며 투자·세무·보험 자문을 대신하지 않습니다. © 2026 geniuskey 및 각 책 기여자 · <a href="LICENSE.md">콘텐츠 CC BY 4.0 · 코드 MIT</a></small>
+  </div>
+</footer>
+</body>
+</html>

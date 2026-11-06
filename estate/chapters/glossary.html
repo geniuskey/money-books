@@ -1,0 +1,529 @@
+<!doctype html>
+<!-- Copyright (c) 2026 geniuskey and EstateBook contributors.
+     Executable code: MIT (see ../LICENSE-MIT).
+     Text, illustrations, questions and explanations: CC-BY-4.0 (see ../LICENSE.md). -->
+<html lang="ko">
+<head>
+<!--head:start {"desc": "책 전체의 부동산 용어 약 180개를 한국어·영어·초성으로 검색하고 원리·주거·금융·세금과 제도·시장·설계 여섯 분야로 걸러 보며, 1~22장 전 범위 22문항 종합 퀴즈로 부동산 공부를 마무리한다."}-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>용어집 & 종합 퀴즈 · EstateBook</title>
+<meta name="description" content="책 전체의 부동산 용어 약 180개를 한국어·영어·초성으로 검색하고 원리·주거·금융·세금과 제도·시장·설계 여섯 분야로 걸러 보며, 1~22장 전 범위 22문항 종합 퀴즈로 부동산 공부를 마무리한다.">
+<link rel="canonical" href="https://money.euiyun.com/estate/chapters/glossary.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EstateBook">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="용어집 &amp; 종합 퀴즈 · EstateBook">
+<meta property="og:description" content="책 전체의 부동산 용어 약 180개를 한국어·영어·초성으로 검색하고 원리·주거·금융·세금과 제도·시장·설계 여섯 분야로 걸러 보며, 1~22장 전 범위 22문항 종합 퀴즈로 부동산 공부를 마무리한다.">
+<meta property="og:url" content="https://money.euiyun.com/estate/chapters/glossary.html">
+<meta property="og:image" content="https://money.euiyun.com/estate/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Chapter","LearningResource"],"@id":"https://money.euiyun.com/estate/chapters/glossary.html#chapter","name":"용어집 & 종합 퀴즈","headline":"용어집 & 종합 퀴즈 · EstateBook","description":"책 전체의 부동산 용어 약 180개를 한국어·영어·초성으로 검색하고 원리·주거·금융·세금과 제도·시장·설계 여섯 분야로 걸러 보며, 1~22장 전 범위 22문항 종합 퀴즈로 부동산 공부를 마무리한다.","url":"https://money.euiyun.com/estate/chapters/glossary.html","position":23,"inLanguage":"ko","isAccessibleForFree":true,"learningResourceType":"인터랙티브 교재","educationalLevel":"일반 성인","image":"https://money.euiyun.com/estate/og.png","dateModified":"2026-10-08","isPartOf":{"@type":"Book","@id":"https://money.euiyun.com/estate/#book","name":"EstateBook · 집값과 전세를 숫자로 푸는 부동산 교과서","url":"https://money.euiyun.com/estate/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"EstateBook","item":"https://money.euiyun.com/estate/"},{"@type":"ListItem","position":2,"name":"23. 용어집 & 종합 퀴즈","item":"https://money.euiyun.com/estate/chapters/glossary.html"}]}]}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/common.js"></script>
+<script src="../js/estate.js"></script>
+<!--head:end-->
+<style>
+  .jump { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 16px; font-size: 15px; }
+  .gl-tools { display: grid; gap: 10px; margin-bottom: 14px; }
+  .gl-tools .row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+  .gl-tools .cap { font-size: 13px; color: var(--text-dim); }
+  .gl-tools .seg { flex-wrap: wrap; }
+  .gl-tools .seg button { font-size: 12.5px; padding: 4px 9px; }
+  .gl-search { margin-bottom: 0 !important; width: 100%; box-sizing: border-box; }
+  .gl-count { font-size: 13px; color: var(--text-faint); margin-left: auto; font-family: var(--mono); }
+  .gl-cho { display: flex; flex-wrap: wrap; gap: 4px; }
+  .gl-cho button { font: inherit; font-size: 13px; min-width: 30px; height: 30px; padding: 0 6px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg-elev); color: var(--text); cursor: pointer; }
+  .gl-cho button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  .gl-cho button:disabled { opacity: .3; cursor: default; }
+  #gl-list { max-height: min(76vh, 960px); overflow-y: auto; overscroll-behavior: contain; padding: 2px 6px 2px 2px; border-radius: 12px; }
+  .gl-group { position: sticky; top: 0; z-index: 1; background: var(--bg); font-weight: 700; font-size: 13px; color: var(--accent); letter-spacing: .04em; margin: 14px 0 0; padding: 4px 0; border-bottom: 1px solid var(--border); }
+  .gl-group:first-child { margin-top: 0; }
+  .gl-item h4 { overflow-wrap: anywhere; }
+  .gl-item .cat { font-size: 11.5px; padding: 1px 8px; border-radius: 999px; background: var(--surface); color: var(--text-dim); margin-right: 10px; }
+  .gl-item mark { background: color-mix(in srgb, var(--warn) 35%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
+  .gl-empty { padding: 24px; text-align: center; color: var(--text-dim); border: 1px dashed var(--border); border-radius: 12px; }
+
+  .fq-status { position: sticky; top: calc(var(--nav-h) + 6px); z-index: 3; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; padding: 10px 16px; margin-bottom: 16px; border-radius: 12px; background: color-mix(in srgb, var(--bg-elev) 92%, transparent); border: 1px solid var(--border); box-shadow: var(--shadow); backdrop-filter: blur(8px); font-size: 14px; color: var(--text-dim); }
+  .fq-status b { font-family: var(--mono); color: var(--text); }
+  .fq-bar { flex: 1 1 120px; height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .fq-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .3s ease; }
+  .quiz-q .qch { display: block; font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .03em; margin-bottom: 4px; }
+  .quiz-q .quiz-exp a { font-weight: 600; }
+  .fq-result { margin-top: 20px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 20px; text-align: center; }
+  .fq-rank { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; color: var(--text-faint); font-weight: 700; }
+  .fq-title { font-size: clamp(22px, 5vw, 30px); font-weight: 800; letter-spacing: -0.02em; margin: 4px 0; color: var(--accent); }
+  .fq-big { font-family: var(--mono); font-size: 40px; font-weight: 700; }
+  .fq-big small { font-size: 18px; color: var(--text-dim); }
+  .fq-dots { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin: 14px 0; }
+  .fq-dots a { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--text); border: 1px solid var(--border); text-decoration: none; }
+  .fq-dots a.ok { background: color-mix(in srgb, var(--ok) 22%, transparent); border-color: var(--ok); }
+  .fq-dots a.bad { background: color-mix(in srgb, var(--bad) 18%, transparent); border-color: var(--bad); }
+  .fq-weak { text-align: left; display: grid; gap: 6px; margin: 0 0 16px; padding: 0; list-style: none; }
+  .fq-weak li { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; padding: 8px 12px; border-radius: 8px; background: var(--surface); font-size: 14px; margin: 0 !important; }
+  .fq-weak li a { font-weight: 700; }
+  .fq-weak li span { color: var(--text-dim); }
+  .after-list { display: grid; gap: 8px; padding: 0; list-style: none; }
+  .after-list li { padding: 10px 14px; border-radius: 10px; background: var(--surface); margin: 0 !important; }
+  .after-list li b { color: var(--accent); }
+</style>
+<!-- Cloudflare Web Analytics -->
+<!-- End Cloudflare Web Analytics -->
+<link rel="stylesheet" href="../../shared/css/book-shell.css">
+<script defer src="../../shared/js/book-shell.js" data-book="estate"></script>
+</head>
+<body data-chapter="glossary">
+<main class="chapter">
+  <header class="chapter-hero">
+    <div class="eyebrow">Chapter 23</div>
+    <h1>용어집 &amp; 종합 퀴즈</h1>
+    <p class="lead">부동산의 말은 짧은데 무겁다. 전세가율, 대항력, 채권최고액, 스트레스 DSR, 비례율, 공정시장가액비율. 단어 하나를 잘못 알아들으면 몇억 원짜리 계약의 위험을 놓친다. 현장에는 갭투자, 영끌, 몸테크, 줍줍, 피, 분담금 폭탄, 깡통전세, 역전세 같은 업계 말도 섞여 다닌다. 이 장은 1장부터 22장까지 흩어진 용어를 한곳에 모은 사전이고, 마지막으로 책 전체를 한 번에 점검하는 종합 퀴즈다.</p>
+    <ul class="objectives">
+      <li>한국어·영어·초성 어느 쪽으로든 부동산 용어를 찾아 뜻을 읽고, 그 용어가 처음 나오는 장으로 바로 이동한다.</li>
+      <li>원리·주거·금융·세금과 제도·시장·설계 여섯 분야로 용어를 걸러 보며 책의 큰 그림을 다시 그린다.</li>
+      <li>22문항 종합 퀴즈(계산 문제 포함)로 스스로를 점검하고, 틀린 문제의 장을 다시 본다.</li>
+      <li>책을 덮은 뒤 실제 결정 앞에서 무엇을 어디서 다시 확인할지 정리한다.</li>
+    </ul>
+    <p class="jump"><a href="#glossary">→ 용어집</a><a href="#quiz">→ 종합 퀴즈</a><a href="#after">→ 이 책을 다 읽은 뒤</a></p>
+  </header>
+
+  <section id="glossary">
+    <h2>용어집</h2>
+    <p>검색창에 한국어(예: <code>전세가율</code>), 영어(예: <code>leverage</code>), 또는 초성(예: <code>ㄷㅎㄹ</code> → 대항력)을 넣으면 바로 걸러진다. 한 글자만 맞아도 되는 부분 일치이고, 정의 본문도 검색 대상이다. 이름이 맞는 용어가 먼저 나오고, 정의에서만 찾은 용어는 그 아래 따로 모인다. 분야 버튼으로 책의 여섯 부(원리·주거·금융·세금과 제도·시장·설계)별로 걸러 볼 수 있다. 분야는 그 용어가 처음 나오는 장의 부를 따르고, 부가 없는 1장과 22장의 용어는 내용에 맞는 부에 넣었다. 각 용어의 장 링크를 누르면 그 용어를 처음 풀어 쓴 장으로 간다.</p>
+    <div class="gl-tools">
+      <input type="search" class="gl-search" id="gl-q" placeholder="용어 검색: 예) 대항력, jeonse, ㅈㅅㄱㅇ" autocomplete="off" aria-label="용어 검색">
+      <div class="row">
+        <span class="cap">분야</span>
+        <div class="seg" id="gl-cat">
+          <button data-value="all" class="on">전체</button>
+          <button data-value="p">원리</button>
+          <button data-value="h">주거</button>
+          <button data-value="f">금융</button>
+          <button data-value="t">세금과 제도</button>
+          <button data-value="m">시장</button>
+          <button data-value="d">설계</button>
+        </div>
+      </div>
+      <div class="row">
+        <span class="cap">정렬</span>
+        <div class="seg" id="gl-sort"><button data-value="kor" class="on">가나다순</button><button data-value="ch">장 순서</button></div>
+        <span class="gl-count" id="gl-count"></span>
+      </div>
+      <div class="gl-cho" id="gl-cho" aria-label="초성으로 건너뛰기"></div>
+    </div>
+    <div class="gl-list" id="gl-list" aria-live="polite"></div>
+    <div class="callout warn"><strong>제도와 수치는 해마다 바뀐다</strong> 용어 설명에 나오는 비율과 한도(전월세 전환율 상한, 계약갱신 때 증액 상한, 소액임차인 최우선변제 금액, LTV·DSR과 스트레스 금리, 취득세율, 공정시장가액비율, 종합부동산세 공제액, 1세대 1주택 비과세 기준, 다주택 중과, 청약 요건, 규제지역 지정)는 2026년 기준 교육용 대표값이다. 대출 규제와 규제지역은 한 해에도 여러 번 바뀌고, 2026 세제개편안처럼 국회 심사 중인 안(종부세 공정시장가액비율 상향, 장기보유특별공제 개편 등)은 아직 확정 전이다. 계약하거나 신고하기 전에는 그해의 법령과 국토교통부, 국세청, 금융위원회, 한국부동산원, 주택도시보증공사, 청약홈, 인터넷등기소의 공식 안내를 다시 확인한다.</div>
+  </section>
+
+  <section class="quiz-sec" id="quiz">
+    <h2>종합 퀴즈</h2>
+    <p>1장 부동산의 지도에서 22장 실험실까지, 한 장에 한 문항씩 낸 22문항이다. 여섯 부에서 고르게 냈고 그중 열 문항은 직접 계산하는 문제다. 보기를 하나 고르면 정답과 해설, 그 장으로 가는 링크가 나온다. 22문항을 모두 풀면 아래에 점수와 다시 볼 장이 나타난다. 계산 문제의 숫자는 이 책의 엔진으로 검산한 값이고, 제도 수치는 2026년 기준이다.</p>
+    <div class="fq-status" id="fq-status" aria-live="polite">
+      <span>푼 문항 <b id="fq-n">0</b> / <b id="fq-total">22</b></span>
+      <span>정답 <b id="fq-s">0</b></span>
+      <span class="fq-bar"><i id="fq-fill"></i></span>
+    </div>
+    <div class="quiz" id="fq">
+      <div class="quiz-q" data-ch="overview">
+        <p><span class="qch">01 부동산의 지도</span>6억원짜리 집을 내 돈 2억원과 대출 4억원으로 샀다. 집값이 10% 올랐다면, 이자·세금·거래비용을 빼고 본 내 돈의 수익률은?</p>
+        <div class="opts">
+          <button class="opt">10%</button>
+          <button class="opt">20%</button>
+          <button class="opt" data-correct>30%</button>
+          <button class="opt">60%</button>
+        </div>
+        <div class="quiz-exp">집값 상승분 6,000만원이 모두 내 돈 2억원 위에 얹힌다. 6,000만 ÷ 2억 = 30%다. 집값 ÷ 내 돈 = 3배가 레버리지 배수이고, 같은 지렛대가 하락기에는 손실을 3배로 키운다. 이자를 넣으면 손실 쪽이 더 커진다. <a href="overview.html">→ 1장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="location">
+        <p><span class="qch">02 입지</span>같은 해에 같은 건설사가 같은 자재로 지은 84㎡ 아파트 두 채의 값이 두 배 차이 난다. 이 차이를 가장 잘 설명하는 것은?</p>
+        <div class="opts">
+          <button class="opt" data-correct>건물을 다시 짓는 값(재조달원가)은 비슷하고, 차이는 대부분 땅의 몫(대지지분)의 값, 곧 입지에서 나온다</button>
+          <button class="opt">비싼 쪽이 건축비를 두 배로 썼기 때문이다</button>
+          <button class="opt">비싼 쪽의 전용면적이 실제로는 두 배이기 때문이다</button>
+          <button class="opt">집값은 무작위라 설명할 수 없다</button>
+        </div>
+        <div class="quiz-exp">자재와 인건비는 지역마다 크게 다르지 않아 건물값은 비슷하다. 남는 차이는 그 땅이 일자리·교통·학교에 얼마나 가까운가에 대한 값이다. "왜 같은 평수가 두 배인가"는 "왜 같은 넓이의 땅이 두 배인가"라는 질문이다. <a href="location.html">→ 2장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="value">
+        <p><span class="qch">03 집값과 금리</span>한 해 임대료가 2,000만원이고 해마다 1%씩 오르는 집이 있다. 할인율(금리 + 위험 프리미엄)이 연 5%라면, 가격 = 임대료 ÷ (할인율 − 성장률)로 본 이론 가격은?</p>
+        <div class="opts">
+          <button class="opt">2억원</button>
+          <button class="opt">4억원</button>
+          <button class="opt">3억 3,333만원</button>
+          <button class="opt" data-correct>5억원</button>
+        </div>
+        <div class="quiz-exp">2,000만 ÷ (0.05 − 0.01) = 2,000만 ÷ 0.04 = 5억원이다. 분모가 4%로 작아서 금리가 1%p만 올라도 분모가 5%가 되어 가격은 4억원으로 20% 내려간다. 집값이 금리에 예민한 이유다. <a href="value.html">→ 3장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="supply">
+        <p><span class="qch">04 공급의 시차</span>재건축 단지에서 1,000세대를 허물고 1,500세대를 새로 지었다. 이 사업이 늘린 집은?</p>
+        <div class="opts">
+          <button class="opt">1,500세대</button>
+          <button class="opt" data-correct>500세대</button>
+          <button class="opt">2,500세대</button>
+          <button class="opt">0세대</button>
+        </div>
+        <div class="quiz-exp">헐어서 없어진 집(멸실)을 빼야 순증가가 나온다. 1,500 − 1,000 = 500세대다. 게다가 공사 기간 동안 1,000세대가 먼저 사라지므로, 그 사이에는 주변 전세 수요가 오히려 늘 수 있다. <a href="supply.html">→ 4장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="jeonse">
+        <p><span class="qch">05 전세의 경제학</span>집값 5억원, 전세 보증금 4억원(전세가율 80%)인 집에 다른 빚은 없다. 집값이 20% 내리면 전세가율은?</p>
+        <div class="opts">
+          <button class="opt">64%</button>
+          <button class="opt">80% 그대로</button>
+          <button class="opt" data-correct>100%. 집을 팔아도 보증금만 겨우 남는다</button>
+          <button class="opt">120%</button>
+        </div>
+        <div class="quiz-exp">집값이 4억원이 되면 4억 ÷ 4억 = 100%다. 경매로 가면 낙찰가가 시세보다 낮고 경매 비용도 빠지므로 보증금을 다 돌려받지 못할 수 있다. 이렇게 집을 팔아도 보증금을 채우지 못하는 상태를 깡통전세라 한다. 집주인의 갭 1억원은 20% 하락에 모두 사라진다. <a href="jeonse.html">→ 5장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="rent">
+        <p><span class="qch">06 월세와 임대차 제도</span>전세 4억원을 보증금 2억원짜리 반전세로 바꾼다. 2026년 기준 법정 전월세 전환율 상한(기준금리 3.0% + 2%p = 연 5%)을 적용하면 월세는 최대 얼마인가?</p>
+        <div class="opts">
+          <button class="opt" data-correct>약 83만원</button>
+          <button class="opt">약 50만원</button>
+          <button class="opt">약 66만원</button>
+          <button class="opt">약 167만원</button>
+        </div>
+        <div class="quiz-exp">월세로 바꾸는 보증금은 2억원이다. 2억 × 5% ÷ 12 = 약 83만 3,000원이다. 이 상한은 계약 기간 중 보증금을 월세로 바꿀 때 적용되며, 기준금리를 따라 움직인다(연 10%와 기준금리 + 2%p 중 낮은 값). <a href="rent.html">→ 6장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="contract">
+        <p><span class="qch">07 계약과 권리 지키기</span>세입자가 이사하고 전입신고를 마친 날, 집주인이 같은 날 은행에서 근저당을 설정했다. 누가 앞서는가?</p>
+        <div class="opts">
+          <button class="opt">세입자. 전입신고가 근저당보다 먼저 접수되었기 때문이다</button>
+          <button class="opt" data-correct>은행. 대항력은 점유와 전입신고를 마친 다음 날 0시에 생기고, 근저당은 등기 접수 즉시 효력이 있다</button>
+          <button class="opt">둘이 같은 순위로 나눈다</button>
+          <button class="opt">확정일자만 있으면 언제나 세입자가 앞선다</button>
+        </div>
+        <div class="quiz-exp">대항력은 '다음 날 0시'에 생기므로 같은 날 들어온 근저당보다 늦다. 그래서 잔금일 당일 근저당 설정을 하지 않는다는 특약을 넣고, 잔금 직전 등기부등본을 다시 떼어 보는 것이 기본이다. <a href="contract.html">→ 7장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="buy">
+        <p><span class="qch">08 매매의 절차와 거래 비용</span>무주택자가 전용 84㎡, 5억원짜리 아파트를 산다(생애최초 감면은 받지 않는다고 가정). 2026년 기준 취득세와 지방교육세를 합하면?</p>
+        <div class="opts">
+          <button class="opt">500만원</button>
+          <button class="opt" data-correct>550만원</button>
+          <button class="opt">1,500만원</button>
+          <button class="opt">0원</button>
+        </div>
+        <div class="quiz-exp">6억원 이하 주택의 취득세율은 1%라 취득세는 500만원이고, 지방교육세가 그 10%인 50만원이다. 85㎡ 이하라 농어촌특별세는 없다. 합계 550만원이다. 생애최초 감면 요건을 갖추면 여기서 최대 200만원을 뺀다. <a href="buy.html">→ 8장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="mortgage">
+        <p><span class="qch">09 주택담보대출</span>3억원을 연 4%, 30년 원리금균등으로 빌리면 매달 내는 돈은 약 얼마인가?</p>
+        <div class="opts">
+          <button class="opt">약 83만원</button>
+          <button class="opt">약 100만원</button>
+          <button class="opt" data-correct>약 143만원</button>
+          <button class="opt">약 183만원</button>
+        </div>
+        <div class="quiz-exp">원리금균등 상환액은 약 143만원이다. 첫 달에는 이 가운데 이자가 100만원(3억 × 4% ÷ 12)이고 원금은 43만원뿐이다. 은행은 DSR을 볼 때 실제 금리에 스트레스 금리를 더해 계산하므로, 같은 소득이라도 한도는 이 계산보다 작게 나온다. <a href="mortgage.html">→ 9장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="leverage">
+        <p><span class="qch">10 레버리지와 위험</span>5억원짜리 집을 전세 4억원을 끼고 내 돈 1억원으로 샀다(갭투자). 집값이 20% 내리면 내 돈은?</p>
+        <div class="opts">
+          <button class="opt">20% 줄어 8,000만원이 남는다</button>
+          <button class="opt">50% 줄어 5,000만원이 남는다</button>
+          <button class="opt">변하지 않는다. 손실은 세입자가 진다</button>
+          <button class="opt" data-correct>100% 사라진다. 집값 4억원이 보증금과 같아진다</button>
+        </div>
+        <div class="quiz-exp">레버리지 배수가 5배(5억 ÷ 1억)라서 집값 −20%가 내 돈 −100%가 된다. 여기서 더 내리면 보증금을 돌려줄 돈이 모자라 위험이 세입자에게 넘어간다. 갭투자의 손실과 깡통전세는 같은 구조의 양면이다. <a href="leverage.html">→ 10장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="subscription">
+        <p><span class="qch">11 청약과 분양</span>무주택 기간 4년, 부양가족 2명, 청약통장 가입 9년인 사람의 청약 가점은(84점 만점)?</p>
+        <div class="opts">
+          <button class="opt" data-correct>36점(10 + 15 + 11)</button>
+          <button class="opt">15점</button>
+          <button class="opt">42점(12 + 20 + 10)</button>
+          <button class="opt">84점</button>
+        </div>
+        <div class="quiz-exp">무주택 기간은 2점에 1년마다 2점(4년 → 10점, 최대 32점), 부양가족은 5점에 1명마다 5점(2명 → 15점, 최대 35점), 통장 가입 기간은 1년 이상부터 2점에 1년마다 1점(9년 → 11점, 최대 17점)이다. 인기 단지의 가점제 커트라인에는 한참 못 미쳐 추첨제 물량이 현실적인 기회가 된다. <a href="subscription.html">→ 11장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="redevelop">
+        <p><span class="qch">12 재건축과 재개발</span>종전자산 감정가 5억원, 비례율 90%, 신청한 새 집의 조합원 분양가 8억원이다. 분담금은?</p>
+        <div class="opts">
+          <button class="opt">3억원</button>
+          <button class="opt" data-correct>3억 5,000만원</button>
+          <button class="opt">4억 5,000만원</button>
+          <button class="opt">2억 5,000만원</button>
+        </div>
+        <div class="quiz-exp">권리가액 = 5억 × 90% = 4억 5,000만원, 분담금 = 8억 − 4억 5,000만 = 3억 5,000만원이다. 비례율이 100%였다면 3억원이었다. 사업 기간이 늘거나 공사비가 오르면 비례율이 내려가 분담금이 커진다. 이것이 '분담금 폭탄'의 구조다. <a href="redevelop.html">→ 12장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="holdingtax">
+        <p><span class="qch">13 보유세</span>5월 31일에 잔금을 치르고 집을 산 사람과 6월 2일에 잔금을 치른 사람이 있다. 그해 재산세는 누가 내는가?</p>
+        <div class="opts">
+          <button class="opt">두 경우 모두 매수인이 낸다</button>
+          <button class="opt">두 경우 모두 매도인이 낸다</button>
+          <button class="opt" data-correct>5월 31일 잔금이면 매수인, 6월 2일 잔금이면 매도인이 낸다</button>
+          <button class="opt">보유한 날수만큼 나눠 낸다</button>
+        </div>
+        <div class="quiz-exp">재산세와 종합부동산세는 매년 6월 1일(과세기준일)에 집을 가진 사람이 그해 몫을 모두 낸다. 날수로 나누지 않는다. 그래서 잔금일을 6월 1일 앞뒤로 정하는 협상이 생긴다. <a href="holdingtax.html">→ 13장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="tradetax">
+        <p><span class="qch">14 사고팔 때의 세금</span>1세대 1주택 비과세 요건을 갖춘 집을 15억원에 팔았고 양도차익이 3억원이다. 2026년 기준 12억원 초과분 과세(안분)로 본 과세 대상 양도차익은?</p>
+        <div class="opts">
+          <button class="opt">0원</button>
+          <button class="opt">3억원</button>
+          <button class="opt">3억원 − 12억원 = 비과세</button>
+          <button class="opt" data-correct>6,000만원</button>
+        </div>
+        <div class="quiz-exp">고가주택은 양도가 가운데 12억원을 넘는 비율만큼만 과세한다. 3억 × (15억 − 12억) ÷ 15억 = 6,000만원이다. 여기에 보유·거주 기간에 따른 장기보유특별공제를 더 뺀 뒤 세율을 매긴다. <a href="tradetax.html">→ 14장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="policy">
+        <p><span class="qch">15 정책과 규제</span>한 지역을 규제지역으로 묶자 그 지역에 몰리던 수요가 규제 없는 옆 지역으로 옮겨 가 그곳 가격이 오르는 현상은?</p>
+        <div class="opts">
+          <button class="opt">매물 잠김</button>
+          <button class="opt" data-correct>풍선 효과</button>
+          <button class="opt">발표 효과</button>
+          <button class="opt">구성 효과</button>
+        </div>
+        <div class="quiz-exp">풍선의 한쪽을 누르면 다른 쪽이 부푸는 것에 빗댄 말이다. 매물 잠김은 양도세 부담 때문에 팔지 않고 버티는 현상, 발표 효과는 공급 계획 발표가 기대를 바꿔 지금의 수요를 미루는 현상, 구성 효과는 통계에서 거래 구성이 바뀌어 평균이 움직이는 현상이다. <a href="policy.html">→ 15장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="data">
+        <p><span class="qch">16 집값 통계 읽기</span>한 달 동안 어떤 동네에서 5억, 5억, 6억, 6억, 18억원에 다섯 건이 거래되었다. 평균과 중위값은?</p>
+        <div class="opts">
+          <button class="opt">평균 6억원, 중위값 8억원</button>
+          <button class="opt">둘 다 6억원</button>
+          <button class="opt">평균 8억원, 중위값 5억원</button>
+          <button class="opt" data-correct>평균 8억원, 중위값 6억원</button>
+        </div>
+        <div class="quiz-exp">합계 40억 ÷ 5 = 평균 8억원이고, 줄을 세운 한가운데 값은 6억원이다. 비싼 거래 한 건이 평균을 2억원 끌어올렸다. "평균 거래가 급등" 같은 기사 제목은 집값이 오른 것이 아니라 비싼 집이 많이 팔린 것(구성 효과)일 수 있다. <a href="data.html">→ 16장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="bubble">
+        <p><span class="qch">17 거품과 하락</span>이 책이 거품에 대해 권하는 태도로 가장 알맞은 것은?</p>
+        <div class="opts">
+          <button class="opt">거품인지 아닌지를 정확히 맞혀 사고팔 시점을 고른다</button>
+          <button class="opt" data-correct>거품 여부를 맞히는 대신, 집값이 크게 내리고 금리가 오를 때 내가 견딜 수 있는지를 계산한다(스트레스 테스트)</button>
+          <button class="opt">집값은 장기적으로 오르니 거품은 신경 쓰지 않는다</button>
+          <button class="opt">PIR이 높으면 반드시 곧 폭락한다</button>
+        </div>
+        <div class="quiz-exp">거품은 지나고 나서야 확실히 보인다. PIR·전세가율·대출 증가·거래량은 위험의 신호일 뿐 시점을 알려 주지 않는다. 대신 "집값이 30% 내리고 금리가 2%p 오르면 상환과 생활이 버티는가"는 지금 계산할 수 있다. <a href="bubble.html">→ 17장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="beyond">
+        <p><span class="qch">18 주택 밖의 부동산</span>매입가 5억원, 보증금 5,000만원, 월세 250만원인 상가의 표면 수익률은 약 얼마인가?</p>
+        <div class="opts">
+          <button class="opt" data-correct>약 6.7%(연 3,000만원 ÷ 4억 5,000만원)</button>
+          <button class="opt">6.0%(연 3,000만원 ÷ 5억원)</button>
+          <button class="opt">약 5.0%</button>
+          <button class="opt">8.0%</button>
+        </div>
+        <div class="quiz-exp">표면 수익률은 1년 치 월세를 매입가에서 보증금을 뺀 내 돈으로 나눈다. 3,000만 ÷ 4억 5,000만 = 약 6.7%다. 이것은 공실도 비용도 없는 최선의 숫자다. 공실, 수선비, 보유세, 임대소득세를 빼고 취득세·중개보수를 분모에 더한 실질 수익률은 이보다 낮다. <a href="beyond.html">→ 18장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="future">
+        <p><span class="qch">19 인구와 도시의 미래</span>주택연금의 '비소구'가 뜻하는 것은?</p>
+        <div class="opts">
+          <button class="opt">연금을 받는 동안 집을 팔 수 없다는 뜻이다</button>
+          <button class="opt">연금 지급액이 해마다 오른다는 뜻이다</button>
+          <button class="opt" data-correct>정산할 때 집값이 쌓인 빚보다 적어도 모자란 돈을 상속인에게 청구하지 않는다는 뜻이다</button>
+          <button class="opt">집값이 오르면 연금을 더 준다는 뜻이다</button>
+        </div>
+        <div class="quiz-exp">주택연금은 집을 담보로 맡기고 그 집에 살면서 매달 돈을 받는 상품이다. 받은 돈은 이자와 함께 빚으로 쌓이고, 부부가 모두 세상을 떠나면 집을 처분해 정산한다. 모자라도 청구하지 않고, 남으면 상속인에게 돌려준다. 2026년 기준 부부 중 1명이 만 55세 이상, 공시가격 12억원 이하 주택이 가입 요건으로 알려져 있다. <a href="future.html">→ 19장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="decision">
+        <p><span class="qch">20 사느냐 빌리느냐</span>사는 쪽이 빌리는 쪽보다 싸지려면 일정 기간 이상 살아야 하는 '손익분기 보유 기간'이 생기는 가장 큰 이유는?</p>
+        <div class="opts">
+          <button class="opt" data-correct>취득세·중개보수·이사비 같은 거래비용을 처음에 한 번 크게 내므로, 오래 살수록 한 해 몫이 작아지기 때문</button>
+          <button class="opt">집값은 언제나 오르기 때문</button>
+          <button class="opt">전세 보증금은 이자가 붙기 때문</button>
+          <button class="opt">대출 원금 상환이 모두 비용이기 때문</button>
+        </div>
+        <div class="quiz-exp">사고팔 때 드는 돈은 몇 년 살든 비슷하게 나가므로, 짧게 살면 한 해 몫이 커진다. 원금 상환은 비용이 아니라 집의 내 몫이 커지는 저축(강제 저축)이다. 손익분기 기간은 집값 상승률·금리·기회비용에 따라 크게 움직인다. <a href="decision.html">→ 20장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="plan">
+        <p><span class="qch">21 내 집 마련 계획</span>월 생활비가 400만원인 가족이 이 책의 기준대로 비상금을 6개월치 남기고 집을 산다면, 잔금에 쓰지 말아야 할 돈은?</p>
+        <div class="opts">
+          <button class="opt">400만원</button>
+          <button class="opt">1,200만원</button>
+          <button class="opt" data-correct>2,400만원</button>
+          <button class="opt">4,800만원</button>
+        </div>
+        <div class="quiz-exp">400만 × 6 = 2,400만원이다. 감당 가능한 가격은 이 비상금을 먼저 떼고, 월 상환 한도에서 빌릴 수 있는 원금을 구한 뒤, 남은 내 돈을 더해 거꾸로 계산한다. 잔금일에 통장을 바닥까지 비우는 계획은 첫 수리비나 소득 공백 한 번에 무너진다. <a href="plan.html">→ 21장 복습</a></div>
+      </div>
+      <div class="quiz-q" data-ch="lab">
+        <p><span class="qch">22 실험실</span>몬테카를로 시뮬레이션으로 30년 주거 경로를 수백 번 돌리는 이유로 가장 알맞은 것은?</p>
+        <div class="opts">
+          <button class="opt">미래의 집값을 정확히 예측하기 위해</button>
+          <button class="opt">가장 운이 좋은 경로를 찾기 위해</button>
+          <button class="opt">평균 한 줄만 보면 충분하기 때문</button>
+          <button class="opt" data-correct>금리와 집값이 흔들릴 때 결과가 얼마나 퍼지는지, 나쁜 쪽 끝에서 내가 버틸 수 있는지를 보기 위해</button>
+        </div>
+        <div class="quiz-exp">시뮬레이션은 예측이 아니다. 같은 선택이 운에 따라 어떤 범위의 결과를 낳는지 보여 준다. 평균이 좋아도 나쁜 쪽 끝에서 예금이 바닥나거나 깡통주택이 되는 경로가 많다면, 그 선택은 우리 가족에게 위험하다. <a href="lab.html">→ 22장 복습</a></div>
+      </div>
+    </div>
+
+    <div class="fq-result" id="fq-result" hidden>
+      <div class="fq-rank">RESULT</div>
+      <div class="fq-title" id="fq-title"></div>
+      <div class="fq-big" id="fq-big"></div>
+      <p id="fq-msg"></p>
+      <div class="fq-dots" id="fq-dots"></div>
+      <ul class="fq-weak" id="fq-weak"></ul>
+      <button class="btn primary" id="fq-retry">다시 풀기</button>
+    </div>
+  </section>
+
+  <section id="after">
+    <h2>이 책을 다 읽은 뒤</h2>
+    <p>이 책은 정답을 주지 않았다. 집값을 움직이는 다섯 힘(입지, 금리, 공급, 대출 규제, 기대)을 구분하는 눈과, 내 숫자를 넣어 총비용과 위험을 비교하는 방법을 주려 했다. 실제 결정 앞에서는 아래 순서로 책을 다시 쓰면 된다.</p>
+    <ul class="after-list">
+      <li><b>내 숫자부터.</b> <a href="lab.html">22장 실험실</a>에 우리 가구의 소득·자산·생활비를 넣고, 금리와 집값 시나리오를 바꿔 30년 경로를 돌려 본다. 평균보다 나쁜 쪽 끝을 먼저 본다.</li>
+      <li><b>사느냐 빌리느냐.</b> <a href="decision.html">20장</a>의 연간 총비용과 손익분기 보유 기간으로 매매·전세·월세를 비교하고, <a href="plan.html">21장</a>의 역산으로 감당 가능한 가격을 정한다. 비상금은 먼저 떼어 둔다.</li>
+      <li><b>계약 전에 서류.</b> 전세든 매매든 큰돈을 넣기 전에 등기부등본(인터넷등기소)과 건축물대장(정부24·세움터)을 직접 떼어 <a href="contract.html">7장</a>의 체크리스트로 읽는다. 잔금 직전에 한 번 더 뗀다.</li>
+      <li><b>대출과 세금은 그해 기준으로.</b> LTV·DSR·스트레스 금리는 은행 상담으로, 취득세는 위택스, 양도세는 국세청 홈택스, 보유세의 기준인 공시가격은 부동산 공시가격알리미에서 확인한다. 이 책의 숫자는 2026년 기준 대표값이다.</li>
+      <li><b>시장 숫자는 다시 계산해서.</b> 기사 제목의 "집값 급등·급락"은 실거래가 공개시스템과 가격지수로 거래량, 중위값, 구성 효과를 확인한 뒤 받아들인다(<a href="data.html">16장</a>).</li>
+      <li><b>설명을 먼저 요구한다.</b> 중개사·은행·분양 현장에 수수료나 보수 구조, 위험, 가정한 숫자를 먼저 물어본다. 설명하지 못하는 수익률 보장, 확정 수익, "지금 아니면 끝"이라는 말 앞에서는 멈춘다.</li>
+    </ul>
+  </section>
+
+  <section class="keypoints" id="summary">
+    <h2>핵심 정리</h2>
+    <ol>
+      <li>집값은 다섯 힘(입지, 금리, 공급, 대출 규제, 기대)이 함께 만든다. 가격 변화를 볼 때마다 "이번 변화는 어느 힘에서 왔는가"를 먼저 묻는다.</li>
+      <li>집값은 대체로 임대료 ÷ (금리 + 위험 − 성장)이다. 분모가 작은 자산이라 금리 1%p가 가격을 크게 흔든다.</li>
+      <li>전세는 세입자가 집주인에게 주는 무이자 대출이다. 전세가율이 높을수록 갭은 작아지고, 집값이 조금만 내려도 역전세와 깡통전세가 같은 구조에서 나온다. 대항력·확정일자·보증보험은 정해진 날짜에 정해진 일을 했을 때만 지켜 준다.</li>
+      <li>레버리지는 양쪽으로 똑같이 작동하지만 이자·세금·거래비용 때문에 손실 쪽이 더 무겁다. 대출 한도는 LTV·DSR·금액 상한 가운데 가장 작은 값이고, 금리가 오르면 한도와 지불 가능한 집값이 함께 줄어든다.</li>
+      <li>세금은 사는 순간(취득세), 가지고 있는 동안(재산세·종부세, 6월 1일 기준), 파는 순간(양도세)에 따로 붙고, 주택 수와 지역과 보유·거주 기간이 크게 바꾼다.</li>
+      <li>통계와 기사의 숫자는 만든 방법이 다르면 다르다. 호가·실거래가·지수, 평균과 중위값, 거래량을 함께 본다. 거품은 맞히기보다 견딜 수 있는지를 계산한다.</li>
+      <li>사느냐 빌리느냐에 정답은 없다. 연간 총비용, 손익분기 보유 기간, 비상금과 월 상환 한도, 나쁜 시나리오에서의 생존을 내 숫자로 계산하고, 제도와 수치는 그해 공식 안내로 다시 확인한다.</li>
+    </ol>
+  </section>
+</main>
+
+<script src="../js/glossary-data.js"></script>
+<script>
+(function () {
+  "use strict";
+  /* =============================================================== 용어 데이터
+     [한국어, 영어, 정의, 장 slug, 분야]  분야: p 원리, h 주거, f 금융, t 세금과 제도, m 시장, d 설계 */
+  const RAW = window.BOOK_GLOSSARY.terms.map((t) => [t.ko, t.en, t.def, t.chapters[0], t.category]);
+
+  /* =============================================================== 공통 */
+  const CH = {}, ORDER = {};
+  EB.CHAPTERS.forEach((c, i) => { CH[c.slug] = c; ORDER[c.slug] = i; });
+  const GNAME = { p: "원리", h: "주거", f: "금융", t: "세금과 제도", m: "시장", d: "설계" };
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const norm = (s) => String(s).toLowerCase().replace(/[\s\-·_/()'.,%]/g, "");
+  const CHO = ["ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
+  const MERGE = { "ㄲ": "ㄱ", "ㄸ": "ㄷ", "ㅃ": "ㅂ", "ㅆ": "ㅅ", "ㅉ": "ㅈ" };
+  const JUMP = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ", "A–Z", "0–9"];
+  const choOf = (ch) => { const c = ch.charCodeAt(0); return c >= 0xac00 && c <= 0xd7a3 ? CHO[Math.floor((c - 0xac00) / 588)] : ch.toLowerCase(); };
+  const choStr = (s) => [...s.replace(/\s/g, "")].map(choOf).join("");
+  const initial = (s) => { const j = choOf(s[0]); return CHO.includes(j) ? MERGE[j] || j : /[0-9]/.test(s[0]) ? "0–9" : "A–Z"; };
+  const gOrd = (g) => { const i = JUMP.indexOf(g); return i >= 0 ? i : 99; };
+  function hl(text, q) {
+    if (!q) return esc(text);
+    const i = text.toLowerCase().indexOf(q);
+    if (i < 0) return esc(text);
+    return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
+  }
+
+  const TERMS = RAW.map((r, i) => {
+    const t = { id: i, ko: r[0], en: r[1], def: r[2], ch: r[3], g: r[4] };
+    t._key = norm(t.ko + " " + t.en);
+    t._def = norm(t.def);
+    t._cho = choStr(t.ko);
+    t._ini = initial(t.ko);
+    return t;
+  });
+
+  /* =============================================================== 용어집 */
+  const qEl = $("gl-q"), listEl = $("gl-list"), countEl = $("gl-count"), choEl = $("gl-cho");
+  const catSel = EB.seg("gl-cat", renderGlossary), sortSel = EB.seg("gl-sort", renderGlossary);
+  qEl.addEventListener("input", renderGlossary);
+  choEl.innerHTML = JUMP.map((g) => `<button type="button" data-g="${g}">${g}</button>`).join("");
+  choEl.addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b || b.disabled) return;
+    if (sortSel() !== "kor" || qEl.value) { qEl.value = ""; sortSel.set("kor", false); renderGlossary(); }
+    const h = listEl.querySelector(`.gl-group[data-g="${b.dataset.g}"]`);
+    if (h) listEl.scrollTop = h.offsetTop - listEl.offsetTop;
+  });
+
+  function renderGlossary() {
+    const raw = qEl.value.trim(), q = norm(raw), qLow = raw.toLowerCase(), cat = catSel(), mode = sortSel();
+    const choQ = /^[ㄱ-ㅎ]+$/.test(q) ? q : "";
+    const nameHit = (t) => (choQ ? t._cho.indexOf(choQ) >= 0 : t._key.indexOf(q) >= 0);
+    const items = TERMS.filter((t) => {
+      if (cat !== "all" && t.g !== cat) return false;
+      return !q || nameHit(t) || (!choQ && t._def.indexOf(q) >= 0);
+    });
+    const rank = (t) => (q && !nameHit(t) ? 1 : 0);
+    items.sort((a, b) => {
+      const r = rank(a) - rank(b); if (r) return r;
+      if (mode === "ch") { const d = ORDER[a.ch] - ORDER[b.ch]; if (d) return d; return a.id - b.id; }
+      const g = gOrd(a._ini) - gOrd(b._ini); if (g) return g;
+      return a.ko.localeCompare(b.ko, "ko");
+    });
+    const inCat = cat === "all" ? TERMS.length : TERMS.filter((t) => t.g === cat).length;
+    countEl.textContent = items.length + " / " + inCat + "개 용어" + (cat === "all" ? "" : " · " + GNAME[cat]);
+    const present = new Set(TERMS.filter((t) => cat === "all" || t.g === cat).map((t) => t._ini));
+    choEl.querySelectorAll("button").forEach((b) => { b.disabled = !present.has(b.dataset.g); });
+    if (!items.length) { listEl.innerHTML = `<div class="gl-empty">“${esc(raw)}”에 해당하는 용어가 없다. 다른 표현이나 영어, 초성으로도 검색해 보자.</div>`; return; }
+    const html = [];
+    let last = null;
+    items.forEach((t) => {
+      const c = CH[t.ch];
+      const g = q && rank(t) ? "정의 본문 일치" : mode === "ch" ? Number(c.num) + "장 · " + c.title : t._ini;
+      if (g !== last) { last = g; html.push(`<div class="gl-group" data-g="${esc(g)}">${esc(g)}</div>`); }
+      html.push(`<div class="gl-item" id="term-${t.id}"><h4>${hl(t.ko, choQ ? "" : qLow)}${t.en ? `<span class="en">${hl(t.en, qLow)}</span>` : ""}</h4><p>${hl(t.def, choQ ? "" : qLow)}</p><span class="cat">${GNAME[t.g]}</span><a class="ch" href="${t.ch}.html">→ ${Number(c.num)}장 ${esc(c.title)}</a></div>`);
+    });
+    listEl.innerHTML = html.join("");
+    listEl.scrollTop = 0;
+  }
+  renderGlossary();
+
+  /* =============================================================== 종합 퀴즈 */
+  const QS = [...document.querySelectorAll("#fq .quiz-q")];
+  const QN = QS.length;
+  $("fq-total").textContent = QN;
+  const RANKS = [
+    [0, "다시 첫 장부터", "용어집에서 낯선 말을 먼저 찾고, 틀린 장을 차례로 다시 읽어 보자."],
+    [8, "기초를 잡는 중", "큰 그림은 잡혔다. 아래 장들의 시뮬레이터를 직접 움직여 보면 숫자가 손에 붙는다."],
+    [13, "계약서를 읽을 수 있는 수준", "대부분의 원리와 제도를 이해했다. 틀린 장의 계산만 다시 해 보자."],
+    [18, "숫자로 판단하는 사람", "거의 모든 문제를 맞혔다. 실험실에 내 숫자를 넣어 볼 차례다."],
+    [22, "만점", "책 전체를 꿰뚫었다. 이제 남은 것은 그해의 제도를 확인하는 일이다."],
+  ];
+  function tally() {
+    const done = QS.filter((q) => q.classList.contains("done"));
+    const ok = done.filter((q) => !q.querySelector("button.opt.wrong"));
+    $("fq-n").textContent = done.length;
+    $("fq-s").textContent = ok.length;
+    $("fq-fill").style.width = (done.length / QN) * 100 + "%";
+    if (done.length === QN) showResult(ok.length);
+  }
+  function showResult(s) {
+    let rank = RANKS[0];
+    RANKS.forEach((r) => { if (s >= r[0]) rank = r; });
+    $("fq-title").textContent = rank[1];
+    $("fq-big").innerHTML = s + "<small> / " + QN + "</small>";
+    $("fq-msg").textContent = "정답률 " + Math.round((s / QN) * 100) + "% · " + rank[2];
+    $("fq-dots").innerHTML = QS.map((q, i) => {
+      const good = !q.querySelector("button.opt.wrong"), c = CH[q.dataset.ch];
+      return `<a class="${good ? "ok" : "bad"}" href="#fq-q${i + 1}" title="${Number(c.num)}장 ${esc(c.title)}">${i + 1}</a>`;
+    }).join("");
+    const miss = {};
+    QS.forEach((q) => { if (q.querySelector("button.opt.wrong")) miss[q.dataset.ch] = (miss[q.dataset.ch] || 0) + 1; });
+    const weak = EB.CHAPTERS.filter((c) => miss[c.slug]);
+    $("fq-weak").innerHTML = weak.length
+      ? weak.map((c) => `<li><a href="${c.slug}.html">${Number(c.num)}장 ${esc(c.title)}</a><span>${esc(c.desc)}</span></li>`).join("")
+      : `<li><span>모든 문제를 맞혔다. <a href="lab.html">22장 실험실</a>에서 우리 가족의 숫자를 넣어 보자.</span></li>`;
+    $("fq-result").hidden = false;
+  }
+  QS.forEach((q, i) => { q.id = "fq-q" + (i + 1); });
+  $("fq").addEventListener("answered", tally);
+  $("fq-retry").addEventListener("click", () => {
+    QS.forEach((q) => {
+      q.classList.remove("done");
+      q.querySelectorAll("button.opt").forEach((b) => { b.disabled = false; b.classList.remove("right", "wrong"); });
+    });
+    $("fq-result").hidden = true;
+    tally();
+    $("quiz").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  tally();
+})();
+</script>
+</body>
+</html>

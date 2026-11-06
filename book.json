@@ -1,0 +1,18 @@
+{
+  "id": "moneybooks",
+  "title": "MoneyBooks",
+  "description": "월급 명세서와 예산에서 경제 뉴스, 주식과 부동산, 세금과 보험까지. 숫자를 직접 바꾸며 배우는 한국어 돈·경제 교과서 6권을 한 저장소와 한 주소에서 만납니다.",
+  "url": "https://money.euiyun.com/",
+  "repo": "https://github.com/geniuskey/money-books",
+  "field": "money",
+  "status": "published",
+  "domain": "money.euiyun.com",
+  "books": [
+    "money/book.json",
+    "economics/book.json",
+    "stock/book.json",
+    "estate/book.json",
+    "tax/book.json",
+    "insure/book.json"
+  ]
+}
