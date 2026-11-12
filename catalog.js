@@ -241,3 +241,16 @@ window.MONEY_MAP = {
     ]
   ]
 };
+window.SHELF = Object.assign({
+  "id": "moneybooks",
+  "title": "MoneyBooks",
+  "url": "https://money.euiyun.com/",
+  "coverTitles": {
+    "moneybook": "돈",
+    "economicsbook": "경제",
+    "stockbook": "주식",
+    "estatebook": "부동산",
+    "taxbook": "세금",
+    "insurebook": "보험"
+  }
+}, { books: window.MONEY_BOOKS, map: window.MONEY_MAP });

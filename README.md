@@ -22,14 +22,15 @@ StockBook의 `chapters/index.html`은 15장 ‘지수와 ETF’입니다. 그래
 ## 구성
 
 ```text
-index.html, shelf.css                  서가 홈: 책장·분야 필터·검색, 대표 실험, 읽는 순서
+index.html                             서가 홈: 책장·분야 필터·검색, 대표 실험, 읽는 순서
+shelf.css                              서가 홈 스타일(공통 파일, 직접 수정하지 않음)
 catalog.js                            생성된 책 목록(직접 수정하지 않음)
 catalog.json                          생성된 책 목록과 서가 지도(books.euiyun.com이 읽음, 직접 수정하지 않음)
 book.json                             서가 메타데이터, 각 책의 book.json 목록
 roadmap.json                          준비 중인 책
 migration/books.json                  책마다 slug·서가 정보(표지 motif·색·분야)와 원본 저장소, 주소 바꾸기 규칙
 migration/import-state.json           가져온 파일의 원본 커밋과 해시
-shared/js/shelf.js                    서가 홈의 책장 렌더링·필터
+shared/js/shelf.js                    서가 홈의 책장·필터·지도·실험 덱(공통 파일, 직접 수정하지 않음)
 shared/js/covers.js                   SVG 책 표지(geniuskey/books 포털 코드)
 shared/js/book-shell.js               모든 책 상단 바·서랍의 ‘돈 서가’ 연결
 shared/img/sims/                      홈 ‘직접 해보기’의 시뮬레이터 화면
@@ -58,7 +59,7 @@ node tools/browser-check.cjs            # Playwright 필요(PW_PATH 또는 ../bo
 
 여섯 권은 가져올 때의 canonical·Open Graph·구조화 데이터와 KaTeX CDN을 그대로 씁니다(주소만 `money.euiyun.com/{slug}/`로 바꿈). 책 안의 `tools/head.py`·`tools/check.py`는 개별 저장소 시절의 도구로, 서가 빌드에는 쓰지 않습니다.
 
-책·장·시뮬레이터 수가 바뀌면 `npm run catalog`, `npm run sitemap`, `node tools/og.mjs`로 목록과 공유 이미지를 갱신합니다. 서가 지도(분야 버튼과 ‘읽는 순서’ 위의 지도)는 `book.json`의 `map`에서 고칩니다. 묶음 `id`는 책의 `stage`와 같고, 모든 책은 한 묶음에 들어가야 합니다. 바꾼 뒤 books 저장소에서 `python3 tools/sync-books.py`를 실행하면 books.euiyun.com 지식 지도에도 반영됩니다.
+책·장·시뮬레이터 수가 바뀌면 `npm run catalog`, `npm run sitemap`, `node tools/og.mjs`로 목록과 공유 이미지를 갱신합니다. 서가 지도(분야 버튼과 ‘읽는 순서’ 위의 지도)는 `book.json`의 `map`에서 고칩니다. 묶음 `id`는 책의 `stage`와 같고, 모든 책은 한 묶음에 들어가야 합니다. 바꾼 뒤 books 저장소에서 `python3 tools/sync-books.py`를 실행하면 books.euiyun.com 지식 지도에도 반영됩니다. `shelf.css`와 `shared/js/shelf.js`는 books 저장소 `tools/shelf-kit/`의 공통 파일을 `python3 tools/sync-shelf-kit.py`로 복사한 것입니다. 서가마다 다른 값(제목·주소·표지의 짧은 이름 `coverTitles`·지도 `map`)은 `book.json`에 둡니다.
 
 ## 가져온 책
 

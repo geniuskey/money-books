@@ -85,5 +85,13 @@
         "주택 거래·보유·양도 세금과 과세·공제의 기본 원리"
       ]
     ]
+  },
+  "coverTitles": {
+    "moneybook": "돈",
+    "economicsbook": "경제",
+    "stockbook": "주식",
+    "estatebook": "부동산",
+    "taxbook": "세금",
+    "insurebook": "보험"
   }
 }
