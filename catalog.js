@@ -170,3 +170,74 @@ window.MONEY_BOOKS = [
     "simulators": 128
   }
 ];
+window.MONEY_MAP = {
+  "title": "돈의 흐름에서 내 집 마련까지",
+  "desc": "MoneyBooks의 생활 속 돈 교과서입니다. 돈과 경제의 기본 언어에서 주식·부동산으로, 세금과 보험으로 이어갑니다.",
+  "groups": [
+    {
+      "id": "foundations",
+      "name": "돈과 경제",
+      "en": "Understand",
+      "desc": "월급·예산·금리와 경제 뉴스의 기본 언어"
+    },
+    {
+      "id": "invest",
+      "name": "투자·집",
+      "en": "Invest & Housing",
+      "desc": "주식의 위험과 수익, 집값의 원리와 전월세·대출"
+    },
+    {
+      "id": "life",
+      "name": "세금·보험",
+      "en": "Tax & Insurance",
+      "desc": "월급·투자·상속에 붙는 세금과 위험에 대비하는 보험"
+    }
+  ],
+  "links": [
+    [
+      "moneybook",
+      "economicsbook",
+      "일상의 돈에서 경제 전체로"
+    ],
+    [
+      "economicsbook",
+      "stockbook",
+      "경제의 흐름과 기업·주식"
+    ],
+    [
+      "moneybook",
+      "insurebook",
+      "돈의 계획에 위험 대비 더하기"
+    ],
+    [
+      "moneybook",
+      "taxbook",
+      "벌고 쓰는 돈에 붙는 세금"
+    ],
+    [
+      "stockbook",
+      "taxbook",
+      "투자 수익과 세금"
+    ],
+    [
+      "moneybook",
+      "estatebook",
+      "금리와 대출로 주거 계획 세우기"
+    ],
+    [
+      "moneybook",
+      "stockbook",
+      "자산배분의 기초에서 주식·ETF의 위험과 수익으로"
+    ],
+    [
+      "economicsbook",
+      "estatebook",
+      "금리·신용·공급의 시차가 주택시장에 미치는 영향"
+    ],
+    [
+      "estatebook",
+      "taxbook",
+      "주택 거래·보유·양도 세금과 과세·공제의 기본 원리"
+    ]
+  ]
+};

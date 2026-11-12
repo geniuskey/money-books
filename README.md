@@ -24,6 +24,7 @@ StockBook의 `chapters/index.html`은 15장 ‘지수와 ETF’입니다. 그래
 ```text
 index.html, shelf.css                  서가 홈: 책장·분야 필터·검색, 대표 실험, 읽는 순서
 catalog.js                            생성된 책 목록(직접 수정하지 않음)
+catalog.json                          생성된 책 목록과 서가 지도(books.euiyun.com이 읽음, 직접 수정하지 않음)
 book.json                             서가 메타데이터, 각 책의 book.json 목록
 roadmap.json                          준비 중인 책
 migration/books.json                  책마다 slug·서가 정보(표지 motif·색·분야)와 원본 저장소, 주소 바꾸기 규칙
@@ -34,7 +35,7 @@ shared/js/book-shell.js               모든 책 상단 바·서랍의 ‘돈 �
 shared/img/sims/                      홈 ‘직접 해보기’의 시뮬레이터 화면
 {slug}/                               각 책의 본문, 계산 엔진, 용어 데이터, 책별 회귀 검사(scripts/)
 tools/import-books.py                 개별 저장소에서 가져오기(원본은 읽기만 함, 이 저장소의 수정은 덮어쓰지 않음)
-tools/sync-catalog.py                 catalog.js 생성(migration/books.json + roadmap.json, 장·시뮬레이터 수는 소스에서 셈)
+tools/sync-catalog.py                 catalog.js·catalog.json 생성(migration/books.json + roadmap.json, 장·시뮬레이터 수는 소스에서 셈 + book.json의 map)
 tools/sync-sitemap.py                 루트 사이트맵 생성
 tools/build.mjs                       정적 배포물(.book-dist/) 생성, 분석 태그 추가
 tools/check.py                        메타데이터·링크 정적 검사
@@ -57,7 +58,7 @@ node tools/browser-check.cjs            # Playwright 필요(PW_PATH 또는 ../bo
 
 여섯 권은 가져올 때의 canonical·Open Graph·구조화 데이터와 KaTeX CDN을 그대로 씁니다(주소만 `money.euiyun.com/{slug}/`로 바꿈). 책 안의 `tools/head.py`·`tools/check.py`는 개별 저장소 시절의 도구로, 서가 빌드에는 쓰지 않습니다.
 
-책·장·시뮬레이터 수가 바뀌면 `npm run catalog`, `npm run sitemap`, `node tools/og.mjs`로 목록과 공유 이미지를 갱신합니다.
+책·장·시뮬레이터 수가 바뀌면 `npm run catalog`, `npm run sitemap`, `node tools/og.mjs`로 목록과 공유 이미지를 갱신합니다. 서가 지도(분야 버튼과 ‘읽는 순서’ 위의 지도)는 `book.json`의 `map`에서 고칩니다. 묶음 `id`는 책의 `stage`와 같고, 모든 책은 한 묶음에 들어가야 합니다. 바꾼 뒤 books 저장소에서 `python3 tools/sync-books.py`를 실행하면 books.euiyun.com 지식 지도에도 반영됩니다.
 
 ## 가져온 책
 
